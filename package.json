@@ -1,0 +1,39 @@
+{
+  "name": "auto-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "auto-cli": "src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "setup": "node src/setup.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eefh/auto-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eefh/auto-cli/issues"
+  },
+  "homepage": "https://github.com/eefh/auto-cli#readme",
+  "dependencies": {
+    "@aws-sdk/client-polly": "^3.241.0",
+    "commander": "^9.4.1",
+    "dotenv": "^16.0.3",
+    "editly": "^0.14.2",
+    "microsoft-cognitiveservices-speech-sdk": "^1.24.1",
+    "node-fetch": "^3.3.0",
+    "openai": "^3.1.0",
+    "readline-sync": "^1.4.10",
+    "ts-node": "^10.9.1",
+    "videoshow": "^0.1.12",
+    "yarn": "^1.22.19"
+  }
+}

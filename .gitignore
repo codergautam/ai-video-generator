@@ -1,0 +1,9 @@
+.env
+
+node_modules
+images
+audio.wav
+story.mp4
+audio.mp3
+finalthumbnail.png
+package-lock.json
