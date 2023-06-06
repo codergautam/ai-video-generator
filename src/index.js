@@ -24,9 +24,10 @@ const main = async () => {
     // console.log("Generating images...");
     // await generateImages(story.imagePrompts);
     // console.log("Generating speech...");
-    // await polly(story.text, options.output);
+    // // await polly(story.text, options.output);
+    // await generateSpeech(story.text, options.output);
 
-    // const title = await generateTitle("a story about a gnome");
+    // const title = await generateTitle(options.prompt);
     // await generateThumbnail(title.toUpperCase().replace(/\"/g, ""));
 
     await generateVideo(options.output);

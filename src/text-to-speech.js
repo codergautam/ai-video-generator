@@ -2,7 +2,7 @@ import sdk from "microsoft-cognitiveservices-speech-sdk";
 import generateVideo from "./video.js";
 
 export default async function generateSpeech(text, output) {
-    let audioFile = "audio.wav";
+    let audioFile = "/workspaces/ai-video-generator/src/audio.wav";
 
     const speechConfig = sdk.SpeechConfig.fromSubscription(
         process.env.SPEECH_KEY,

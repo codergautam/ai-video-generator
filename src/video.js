@@ -4,14 +4,14 @@ import { readdir, stat } from "fs/promises";
 import editly from "editly";
 
 export default async function generateVideo(output) {
-    const imageSize = fs.readdirSync("./images").length;
+    const imageSize = fs.readdirSync("/workspaces/ai-video-generator/src/images").length;
     let edit = {
-        outPath: "story.mp4",
+        outPath: "/workspaces/ai-video-generator/src/story.mp4",
         defaults: {
             transition: { name: "fade" },
             duration: 12,
         },
-        audioFilePath: "./audio.mp3",
+        audioFilePath: "/workspaces/ai-video-generator/src/audio.wav",
         height: 1080,
         width: 1920,
     };
@@ -21,7 +21,7 @@ export default async function generateVideo(output) {
             layers: [
                 {
                     type: "image",
-                    path: `./images/image${i}.png`,
+                    path: `/workspaces/ai-video-generator/src/images/image${i}.png`,
                 },
             ],
         });

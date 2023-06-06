@@ -15,16 +15,16 @@ export default async function generateImages(imagePrompts) {
         console.log(`Generating image ${i}/${imagePrompts.length}...`);
         await downloadImage(
             await generateImage(imagePrompts[i]),
-            `./images/image${i}.png`
+            `/workspaces/ai-video-generator/src/images/image${i}.png`
         );
     }
 }
 export const downloadImage = async (url, path) => {
-    console.log("Download");
     const response = await fetch(url);
     const blob = await response.blob();
     const arrayBuffer = await blob.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
+    console.log("Writing image to ", path, buffer);
     await fs.writeFile(path, buffer);
 };
 
@@ -35,5 +35,6 @@ export const generateImage = async (prompt) => {
         n: 1,
         size: "512x512",
     });
+    console.log(response.data.data[0].url);
     return response.data.data[0].url;
 };

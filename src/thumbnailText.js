@@ -10,7 +10,7 @@ export default function generateThumbnail(text) {
     // Draw line under text
 
     // Draw cat with lime helmet
-    loadImage("./thumbnail.png").then((image) => {
+    loadImage("/workspaces/ai-video-generator/src/thumbnail.png").then((image) => {
         ctx.drawImage(image, 0, 128, 512, 218, 0, 0, 1280, 720);
         ctx.strokeStyle = "black";
         ctx.fillStyle = "white";
@@ -21,7 +21,7 @@ export default function generateThumbnail(text) {
         ctx.stroke();
     });
 
-    const out = fs.createWriteStream("./finalthumbnail.png");
+    const out = fs.createWriteStream("/workspaces/ai-video-generator/src/finalThumbnail.png");
     const stream = canvas.createPNGStream();
     stream.pipe(out);
     out.on("finish", () => console.log("The PNG file was created."));
